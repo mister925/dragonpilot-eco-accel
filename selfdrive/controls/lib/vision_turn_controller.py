@@ -20,8 +20,8 @@ _LEAVING_LAT_ACC_TH = 1.3  # Lat Acc threshold to trigger leaving turn state.
 _FINISH_LAT_ACC_TH = 1.1  # Lat Acc threshold to trigger end of turn cycle.
 
 _EVAL_STEP = 5.  # mts. Resolution of the curvature evaluation.
-_EVAL_START = 20.  # mts. Distance ahead where to start evaluating vision curvature.
-_EVAL_LENGHT = 150.  # mts. Distance ahead where to stop evaluating vision curvature.
+_EVAL_START = 5.  # mts. Distance ahead where to start evaluating vision curvature.
+_EVAL_LENGHT = 1500.  # mts. Distance ahead where to stop evaluating vision curvature.
 _EVAL_RANGE = np.arange(_EVAL_START, _EVAL_LENGHT, _EVAL_STEP)
 
 _A_LAT_REG_MAX = 2.  # Maximum lateral acceleration
@@ -30,7 +30,7 @@ _NO_OVERSHOOT_TIME_HORIZON = 4.  # s. Time to use for velocity desired based on 
 
 # Lookup table for the minimum smooth deceleration during the ENTERING state
 # depending on the actual maximum absolute lateral acceleration predicted on the turn ahead.
-_ENTERING_SMOOTH_DECEL_V = [-0.2, -0.5]  # min decel value allowed on ENTERING state
+_ENTERING_SMOOTH_DECEL_V = [-0.4, -0.7]  # min decel value allowed on ENTERING state
 _ENTERING_SMOOTH_DECEL_BP = [1.3, 3.]  # absolute value of lat acc ahead
 
 # Lookup table for the acceleration for the TURNING state
