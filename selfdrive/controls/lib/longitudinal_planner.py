@@ -21,8 +21,8 @@ from selfdrive.controls.lib.events import Events
 
 LON_MPC_STEP = 0.2  # first step is 0.2s
 A_CRUISE_MIN = -1.2
-A_CRUISE_MAX_VALS = [1.6, 1.2, 0.8, 0.6]
-A_CRUISE_MAX_BP = [0., 10.0, 25., 40.]
+A_CRUISE_MAX_VALS = [1.2, 1.2, 0.8, 0.6]
+A_CRUISE_MAX_BP = [0., 15, 25., 40.]
 
 # Lookup table for turns
 _A_TOTAL_MAX_V = [1.7, 3.2]
@@ -40,15 +40,15 @@ DP_ACCEL_NORMAL = 1
 DP_ACCEL_SPORT = 2
 
 # accel profile by @arne182 modified by cgw
-_DP_CRUISE_MIN_V =       [-0.6,  -0.6,  -0.7,  -0.8,  -0.8,  -0.5]
-_DP_CRUISE_MIN_V_ECO =   [-2.0, -1.8, -1.6, -1.4, -1.2, -1.0]
-_DP_CRUISE_MIN_V_SPORT = [-3.0, -2.6, -2.3, -2.1, -2.0, -1.0]
-_DP_CRUISE_MIN_BP =      [0.,    8.3,   14,    20.,   30.,   55.]
+_DP_CRUISE_MIN_V = [-2.0, -1.8, -1.6, -1.4, -1.2]
+_DP_CRUISE_MIN_V_ECO = [-2.0, -1.6, -1.4, -1.2, -1.0]
+_DP_CRUISE_MIN_V_SPORT = [-3.0, -2.6, -2.3, -2.0, -1.0]
+_DP_CRUISE_MIN_BP = [0.0, 5.0, 10.0, 20.0, 55.0]
 
-_DP_CRUISE_MAX_V =       [3.5, 3.4, 2.1, 1.6, 1.1, 0.91, 0.69, 0.44, 0.34, 0.13]
-_DP_CRUISE_MAX_V_ECO =   [1.5, 1.3, 1.0, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2]
-_DP_CRUISE_MAX_V_SPORT = [5.0, 4.0, 3.7, 3.5, 3.4, 3.0, 2.5, 2.4, 2.2, 2.1]
-_DP_CRUISE_MAX_BP =      [0.,  3,   6.,  8.,  11., 15.,  20.,  25.,  30.,  45.]
+_DP_CRUISE_MAX_V = [1.6, 1.4, 1.0, 0.6, 0.3]
+_DP_CRUISE_MAX_V_ECO = [1.5, 1.3, 0.8, 0.4, 0.2]
+_DP_CRUISE_MAX_V_SPORT = [3.0, 3.5, 3.0, 2.0, 2.0]
+_DP_CRUISE_MAX_BP = [0., 5., 10., 20., 55.]
 
 # d-e2e, from modeldata.h
 TRAJECTORY_SIZE = 33
